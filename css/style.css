@@ -18,6 +18,15 @@ a {
   text-decoration: none;
 }
 
+.inner-page {
+  color: #000000;
+
+  background-color: #f9f6f3;
+  background-image: url("img/pattern-light.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
 .main-navigation {
   font-size: 16px;
   line-height: 20px;
