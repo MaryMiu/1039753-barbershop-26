@@ -230,8 +230,8 @@ input[type="radio"].visually-hidden {
 
   background-color: #f8f5f2;
   background-image:
-    url("img/line.png"),
-    url("img/pattern-light.jpg");
+    url("../img/line.png"),
+    url("../img/pattern-light.jpg");
   background-position: center, 0 0;
   background-repeat: no-repeat, repeat;
 }
@@ -403,9 +403,6 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 
   background-color: #212121;
-  background-image: url("img/pattern-dark.jpg");
-  background-position: 0 0;
-  background-repeat: repeat;
 
   padding: 60px 0;
   margin-top: 65px;
@@ -694,7 +691,18 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-map p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
   margin: 0;
+}
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
 }
 
 .product-photo-preview {
@@ -1278,4 +1286,54 @@ input[type="radio"].visually-hidden {
   margin-top: 0;
   margin-right: 460px;
   margin-right: calc(100% - 460px);
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
